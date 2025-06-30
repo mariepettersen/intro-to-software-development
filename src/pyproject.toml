@@ -1,12 +1,9 @@
-```toml
+
   [build-system]
   requires = ["setuptools>=64.0", "setuptools_scm>=8"]
   build-backend = "setuptools.build_meta"
-  ```
-
-  Then, project / package metadata:
-
-  ```toml
+  
+ 
   [project]
   name = "geo-calculator"
   authors = [{ name = "Marie Pettersen" }]
@@ -19,4 +16,7 @@
 
   [project.urls]
   repository = "https://github.com/mariepettersen/intro-to-software-development"
-  ```
+  
+
+  [project.optional-dependencies]
+  dev = ["pytest"]
