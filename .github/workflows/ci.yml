@@ -1,9 +1,14 @@
 name: CI tests
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
+      push:
+        branches:
+          - main
+      pull_request:
+        branches:
+          - main
+
+
 
 jobs:
   build:
@@ -21,3 +26,10 @@ jobs:
         python -m pip install --upgrade pip
         pip install .[dev]
 
+    - name: Test with pytest
+      run: |
+        pytest
+
+    - name: Type checking
+      run: |
+        mypy
